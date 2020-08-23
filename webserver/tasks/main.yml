@@ -1,0 +1,37 @@
+---
+# tasks file for webserver
+
+- name: install httpd package
+  package: 
+    name: "httpd"
+    state: present
+  when: ansible_distribution == "RedHat"
+  register: x
+
+- name: document root dir
+  file:
+    state: directory
+    dest: "{{dcdir}}"
+  register: y
+  tags: webgit
+
+- name: conf web server
+  template: 
+    dest: /etc/httpd/conf.d/ansible.conf
+    src: templates/localconf.conf.j2
+  when: x.rc == 0
+  tags: webconf
+  notify: service httpd
+
+- name: cop web page from url
+  get_url:
+    dest: "{{dcdir}}"
+    url: "https://raw.githubusercontent.com/RajitPaul11/AnsiblePlaybook-Configurations/master/index.html"
+  when: y.failed == false
+  tags: webgit
+
+- name: start service for web
+  service:
+    name: "httpd"
+    state: "started"
+

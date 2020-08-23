@@ -1,0 +1,5 @@
+---
+# vars file for webserver
+
+dcdir: "/var/www/ansibleweb"
+httpport: 81
