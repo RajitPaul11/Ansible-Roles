@@ -1,0 +1,11 @@
+---
+# handlers file for myloadbalancer
+- name: 'lb-service'
+  service:
+    name: "{{ lb_service }}"
+    state: "{{ lbservice_state }}"
+
+- name: 'web-service'
+  service: 
+    name: "{{ web_service }}"
+    state: "{{ webservice_state }}"

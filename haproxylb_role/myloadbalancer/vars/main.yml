@@ -1,0 +1,14 @@
+---
+# vars file for myloadbalancer
+lb_package: 'haproxy'
+lbpackage_state: 'present'
+lb_dest: '/etc/haproxy/haproxy.cfg'
+lb_service: 'haproxy'
+lbservice_state: 'restarted'
+web_package: 'httpd'
+webpackage_state: 'present'
+webservice_state: 'restarted'
+web_service: 'httpd'
+content: 'index.php'
+doc_dir: '/var/www/html'
+lb_port: 8080
