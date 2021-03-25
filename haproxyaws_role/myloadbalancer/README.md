@@ -1,12 +1,12 @@
-Role Name
+HAPROXYLB_AWS 
 =========
 
-A brief description of the role goes here.
+Configuring HA-Proxy LB on AWS 
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Balid AWS Account, AWS configure with IAM User, AWS Key-pair downloaded to launch the instance 
 
 Role Variables
 --------------
