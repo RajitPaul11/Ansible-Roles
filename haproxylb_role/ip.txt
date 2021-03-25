@@ -1,15 +1,15 @@
 [haproxy]
-192.168.29.235 ansible_user=root ansible_ssh_pass=redhat
-192.168.29.180 ansible_user=root ansible_ssh_pass=redhat
-192.168.29.172 ansible_user=root ansible_ssh_pass=redhat
+192.168.29.235 ansible_user=root ansible_ssh_pass=xxxxxxx
+192.168.29.180 ansible_user=root ansible_ssh_pass=xxxxxxx
+192.168.29.172 ansible_user=root ansible_ssh_pass=xxxxxxx
 
 
 [ubuntu]
-192.168.29.228 ansible_user=Tesla ansible_ssh_pass=redhat ansible_become_pass=redhat
+192.168.29.228 ansible_user=Tesla ansible_ssh_pass=xxxx ansible_become_pass=xxxxx
 
 [lb]
-192.168.29.172 ansible_user=root ansible_ssh_pass=redhat 
+192.168.29.172 ansible_user=root ansible_ssh_pass=xxxxxx
 
 [web]
-192.168.29.235 ansible_user=root ansible_ssh_pass=redhat
-192.168.29.180 ansible_user=root ansible_ssh_pass=redhat
+192.168.29.235 ansible_user=root ansible_ssh_pass=xxxxxxx
+192.168.29.180 ansible_user=root ansible_ssh_pass=xxxxxxx
