@@ -1,0 +1,9 @@
+---
+# vars file for myapache
+redhat_package: "httpd"
+state: "present"
+service_state: "started"
+doc_dir: "/var/www/html"
+ubuntu_package: "apache2"
+content: index.html
+...

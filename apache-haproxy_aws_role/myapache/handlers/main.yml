@@ -1,0 +1,12 @@
+---
+# handlers file for myapache
+- name: web_service_redhat
+  service:
+    name: "{{ redhat_package }}"
+    state: "{{ service_state }}"
+
+- name: web_service_ubuntu
+  service:
+    name: "{{ ubuntu_package }}"
+    state: "{{ service_state }}"
+...

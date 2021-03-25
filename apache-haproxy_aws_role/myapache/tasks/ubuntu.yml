@@ -1,0 +1,12 @@
+---
+- name: Install HTTPD Package
+  package:
+    name: "{{ ubuntu_package }}"
+    state: "{{ state }}"
+
+- name: Copy-Web Content
+  copy:
+    src: "{{ content }}"
+    dest: "{{ doc_dir }}"
+  notify: web_service_ubuntu
+...

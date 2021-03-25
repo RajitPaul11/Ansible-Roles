@@ -1,0 +1,10 @@
+---
+# tasks file for myapache
+- name: Web-Server-Configure-RHEL
+  import_tasks: redhat.yml
+  when: ansible_facts['os_family']|lower == 'redhat'
+
+- name: Web-Server-Configure-Ubuntu
+  import_tasks: ubuntu.yml
+  when: ansible_facts['os_family']|lower == 'debian' 
+...

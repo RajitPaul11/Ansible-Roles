@@ -1,0 +1,10 @@
+---
+# tasks file for myloadbalancer
+- name: Setup HAProxy Server
+  import_tasks: lb.yml
+  when: inventory_hostname in groups["lb"]
+
+- name: Setup WebServer
+  import_tasks: webserver.yml
+  when: inventory_hostname in groups["web"]
+
