@@ -1,0 +1,12 @@
+- name: 'Installing LB Package'
+  package: 
+    name: "{{ lb_package }}"
+    state: "{{ lbpackage_state }}"
+
+- name: 'HAProxy Configuration'
+  template:
+    src: 'haproxy.cfg.j2'
+    dest: "{{ lb_dest }}"
+  notify: 'lb-service'
+
+

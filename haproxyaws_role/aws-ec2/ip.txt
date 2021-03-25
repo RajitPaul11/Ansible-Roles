@@ -1,0 +1,11 @@
+[haproxy]
+65.0.199.109 ansible_user=ec2-user 
+13.234.66.100 ansible_user=ec2-user
+3.7.248.70 ansible_user=ec2-user
+
+[lb]
+65.0.199.109 ansible_user=ec2-user 
+
+[web]
+13.234.66.100 ansible_user=ec2-user
+3.7.248.70 ansible_user=ec2-user

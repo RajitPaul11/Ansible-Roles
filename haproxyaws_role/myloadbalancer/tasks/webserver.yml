@@ -1,0 +1,11 @@
+- name: Install WebServer Package
+  package:
+    name: "{{ web_package }}"
+    state: "{{ webpackage_state }}"
+
+- name: Copy Web Content
+  copy:
+    src: "{{ content }}"
+    dest: "{{ doc_dir }}"
+  notify: 'web-service'
+
